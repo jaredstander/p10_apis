@@ -19,6 +19,8 @@ gem 'shotgun'
 
 gem 'octokit'
 
+gem 'oauth'
+
 group :test do
   gem 'faker'
   gem 'rspec'

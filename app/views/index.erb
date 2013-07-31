@@ -1,4 +1,15 @@
 <div class="container">
   <h1>Welcome to p10 using the Github API!</h1>
-  <p>Please login above using your Github account info.</p>
+  <p>Enter a name below to look up a Github user's info.</p>
+  <form class="login-form" action="/user" method="post">
+    <ul>
+      <li class="login-li"><input type="text" name="get_username" placeholder="Enter Username" required /></li>
+      <li class="login-li"><input type="submit" value="Submit" /></li>
+      <li class="login-li">
+        <span class="error">
+          <% if @message %><%= @message %><% end %>
+        </span>
+      </li> 
+    </ul>
+  </form>
 </div>

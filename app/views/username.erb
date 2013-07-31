@@ -1,0 +1,19 @@
+<div class="container">
+  <% if @user %>
+  <h1><a href="<%= @user[:html_url] %>"><%= @user[:login] %></a></h1>
+  <img src="<%= @user[:avatar_url] %>" class="userimage">
+  <p>Account Create at: <%= @user[:created_at] %></p>
+  <p>Number of Public Gists: <a href="http://gist.github.com/<%= @user[:login] %>"><%= @user[:public_gists] %></a></p>
+  <p>Number of Public Repos: <a href="http://github.com/<%= @user[:login] %>?tab=repositories"><%= @user[:public_repos] %></a></p>
+  <p>Number of followers: <a href="http://github.com/<%= @user[:login] %>/followers"><%= @user[:followers] %></a></p>
+  <h1>Check out another user:</h1>
+  <form class="login-form" action="/user" method="post">
+    <ul>
+      <li class="login-li"><input type="text" name="get_username" placeholder="Enter Username" required /></li>
+      <li class="login-li"><input type="submit" value="Submit" /></li>
+    </ul>
+  </form>
+  <% else %>
+    <h1><%=@message%></h1>
+  <% end %>
+</div>
