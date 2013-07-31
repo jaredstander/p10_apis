@@ -17,6 +17,8 @@ gem 'rake'
 
 gem 'shotgun'
 
+gem 'octokit'
+
 group :test do
   gem 'faker'
   gem 'rspec'
